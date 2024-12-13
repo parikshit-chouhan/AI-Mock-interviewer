@@ -116,18 +116,18 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative text-center py-20 ">
-  <div className="absolute inset-0 bg-[url('/robot.jpg')] opacity-80 bg-cover bg-center"></div> {/* Overlay for background opacity */}
-  
-  <div className="relative z-10">
-    <h2 className="text-4xl font-bold text-purple-800 mb-4">Ace Your Next Interview</h2>
-    <p className="text-lg max-w-3xl mx-auto mb-8 font-bold"> {/* Text contrast maintained */}
-      Get ready for job interviews with our AI-powered mock interviews. Tailored questions, realistic feedback, and live camera functionality to prepare you like never before.
-    </p>
-    <Link href={"/dashboard"}>
-      <Button>Let's Get Started</Button>
-    </Link>
-  </div>
-</section>
+        <div className="absolute inset-0 bg-[url('/robot.jpg')] opacity-80 bg-cover bg-center"></div> {/* Overlay for background opacity */}
+
+        <div className="relative z-10">
+          <h2 className="text-4xl font-bold text-purple-800 mb-4">Ace Your Next Interview</h2>
+          <p className="text-lg max-w-3xl mx-auto mb-8 font-bold"> {/* Text contrast maintained */}
+            Get ready for job interviews with our AI-powered mock interviews. Tailored questions, realistic feedback, and live camera functionality to prepare you like never before.
+          </p>
+          <Link href={"/dashboard"}>
+            <Button>Let's Get Started</Button>
+          </Link>
+        </div>
+      </section>
 
 
 
@@ -196,10 +196,10 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer id="contact" className="bg-black py-11 text-center text-white ">
-        <h1 className="text-xl">© 2024 AI Mock Interviewer. All rights reserved.</h1>
-        <p className="opacity-80">Contact us: parikshitchouhan1076@gmail.com</p>
-        <p className="opacity-80">Developed & Maintained By:Parikshit Chouhan</p>
+      <footer id="contact" className="bg-gray-200 py-11 text-center ">
+        <h1 className="text-xl font-bold">© 2024 AI Mock Interviewer. All rights reserved.</h1>
+        <p className="">Contact us: parikshitchouhan1076@gmail.com</p>
+        <p className="">Developed & Maintained By:Parikshit Chouhan</p>
       </footer>
     </div>
   );
