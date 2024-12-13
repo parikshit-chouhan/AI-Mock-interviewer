@@ -1,31 +1,129 @@
-"use client"
-import React, { useEffect } from 'react'
-import Image from 'next/image'
-import { UserButton } from '@clerk/nextjs'
-import { usePathname } from 'next/navigation'
-import Link from 'next/link'
-function Header() {
+"use client";
+import React, { useState } from "react";
+import { UserButton } from "@clerk/nextjs";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
-    const path = usePathname();
-    useEffect(() => {
-        // console.log(path)
-    }, [])
-    return (
-        <div className='flex p-4 items-center justify-between bg-black shadow-sm sticky top-0 z-50'>
-          <Link href={"/dashboard"}>
-        <h1 className="text-xl font-bold cursor-pointer text-white">AI Mock Interviewer</h1>
+function Header() {
+    const [isOpen, setIsOpen] = useState(false);
+  const path = usePathname();
+
+  return (
+    <div className="bg-secondary shadow-lg sticky top-0 z-50  border-b border-gray-200">
+      <div className="flex p-4 items-center justify-between">
+        <Link href={"/dashboard"}>
+          <h1 className="text-xl font-bold cursor-pointer text-purple-800">
+            AI Mock Interviewer
+          </h1>
         </Link>
-            <ul className='hidden md:flex gap-6'>     
-                <Link href={"/dashboard "}>
-                <li className={`hover:text-yellow-400 hover:font-bold transition-all cursor-pointer text-white ${path == '/dashboard' && 'text-yellow-400 font-bold'}`}>Dashboard</li>
-                </Link>
-     
-                <li className={`hover:text-yellow-400 hover:font-bold transition-all cursor-pointer  text-white ${path == '/dashboard/questions' && 'text-yello-400 font-bold'}`}>Questions</li>            
-                <li className={`hover:text-yellow-400 hover:font-bold transition-all cursor-pointer  text-white ${path == '/dashboard/how' && 'text-yello-400 font-bold'}`}>How it Works?</li>
-            </ul>
-            <UserButton />
-        </div >
-    )
+
+        {/* Hamburger Menu for Small Screens */}
+        <div className="md:hidden">
+          <button
+            className="text-purple-800 focus:outline-none"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {/* Hamburger Icon */}
+            <svg
+              className="w-6 h-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d={
+                  isOpen
+                    ? "M6 18L18 6M6 6l12 12" // Close icon (X)
+                    : "M4 6h16M4 12h16M4 18h16" // Hamburger icon
+                }
+              />
+            </svg>
+          </button>
+        </div>
+
+        {/* Navbar Links for Medium+ Screens */}
+        <ul className="hidden md:flex gap-6">
+          <Link href={"/dashboard"}>
+            <li
+              className={`hover:font-bold transition-all cursor-pointer ${
+                path == "/dashboard" && "font-bold"
+              }`}
+            >
+              Dashboard
+            </li>
+          </Link>
+
+          <Link href={"/dashboard/questions"}>
+            <li
+              className={`hover:font-bold transition-all cursor-pointer ${
+                path == "/dashboard/questions" && "text-purple-800 font-bold"
+              }`}
+            >
+              Questions
+            </li>
+          </Link>
+
+          <Link href={"/dashboard/how"}>
+            <li
+              className={`hover:font-bold transition-all cursor-pointer ${
+                path == "/dashboard/how" && "text-purple-800 font-bold"
+              }`}
+            >
+              How it Works?
+            </li>
+          </Link>
+        <UserButton />
+        </ul>
+        {/* User Button */}
+      
+      </div>
+
+      {/* Collapsible Navbar for Small Screens */}
+      {isOpen && (
+        <ul className="md:hidden flex flex-col bg-secondary px-4 py-2 space-y-2 text-center">
+          <Link href={"/dashboard"}>
+            <li
+              className={`hover:font-bold transition-all cursor-pointer ${
+                path == "/dashboard" && "font-bold"
+              }`}
+              onClick={() => setIsOpen(false)}
+            >
+              Dashboard
+            </li>
+          </Link>
+
+          <Link href={"/dashboard/questions"}>
+            <li
+              className={`hover:font-bold transition-all cursor-pointer ${
+                path == "/dashboard/questions" && "text-purple-800 font-bold"
+              }`}
+              onClick={() => setIsOpen(false)}
+            >
+              Questions
+            </li>
+          </Link>
+
+          <Link href={"/dashboard/how"}>
+            <li
+              className={`hover:font-bold transition-all cursor-pointer ${
+                path == "/dashboard/how" && "text-purple-800 font-bold"
+              }`}
+              onClick={() => setIsOpen(false)}
+            >
+              How it Works?
+            </li>
+          </Link>
+          <li>
+          <UserButton />
+          </li>
+        </ul>
+      )}
+    </div>
+  );
 }
 
-export default Header
+export default Header;
