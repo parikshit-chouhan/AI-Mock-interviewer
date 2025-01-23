@@ -6,7 +6,7 @@ function InterviewItemCard({ interview }) {
 
     return (
         <div className='border shadow-sm rounded-lg p-3'>
-            <h2 className='font-bold text-purple-800'>{interview?.jobPosition}</h2>
+            <h2 className='font-bold text-teal-900'>{interview?.jobPosition}</h2>
             <h2 className='text-sm'>{interview?.jobExperience} Years of Experience</h2>
             <h2 className='text-xs text-gray-500'>Created At:{interview?.createdAt}</h2>
             <div>

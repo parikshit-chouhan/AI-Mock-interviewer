@@ -9,10 +9,10 @@ function Header() {
   const path = usePathname();
 
   return (
-    <div className="bg-secondary shadow-lg sticky top-0 z-50  border-b border-gray-200">
+    <div className="bg-white sticky top-0 z-50  border-b border-gray-200">
       <div className="flex p-4 items-center justify-between">
         <Link href={"/dashboard"}>
-          <h1 className="text-xl font-bold cursor-pointer text-purple-800">
+          <h1 className="text-2xl font-bold cursor-pointer text-teal-900">
             AI Mock Interviewer
           </h1>
         </Link>
@@ -20,7 +20,7 @@ function Header() {
         {/* Hamburger Menu for Small Screens */}
         <div className="md:hidden">
           <button
-            className="text-purple-800 focus:outline-none"
+            className="text-teal-900 focus:outline-none"
             onClick={() => setIsOpen(!isOpen)}
           >
             {/* Hamburger Icon */}
@@ -60,7 +60,7 @@ function Header() {
           <Link href={"/dashboard/questions"}>
             <li
               className={`hover:font-bold transition-all cursor-pointer ${
-                path == "/dashboard/questions" && "text-purple-800 font-bold"
+                path == "/dashboard/questions" && "text-teal-900 font-bold"
               }`}
             >
               Questions
@@ -70,7 +70,7 @@ function Header() {
           <Link href={"/dashboard/how"}>
             <li
               className={`hover:font-bold transition-all cursor-pointer ${
-                path == "/dashboard/how" && "text-purple-800 font-bold"
+                path == "/dashboard/how" && "text-teal-900 font-bold"
               }`}
             >
               How it Works?
@@ -99,7 +99,7 @@ function Header() {
           <Link href={"/dashboard/questions"}>
             <li
               className={`hover:font-bold transition-all cursor-pointer ${
-                path == "/dashboard/questions" && "text-purple-800 font-bold"
+                path == "/dashboard/questions" && "text-teal-900 font-bold"
               }`}
               onClick={() => setIsOpen(false)}
             >
@@ -110,7 +110,7 @@ function Header() {
           <Link href={"/dashboard/how"}>
             <li
               className={`hover:font-bold transition-all cursor-pointer ${
-                path == "/dashboard/how" && "text-purple-800 font-bold"
+                path == "/dashboard/how" && "text-teal-900 font-bold"
               }`}
               onClick={() => setIsOpen(false)}
             >

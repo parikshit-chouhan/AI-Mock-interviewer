@@ -33,7 +33,7 @@ function Feedback({ params }) {
                 <h2 className='font-bold text-xl text-center'>No Interview data found</h2>
                 :
                 <>
-                    <h2 className='text-3xl font-bold text-purple-800'>Congratulation!</h2>
+                    <h2 className='text-3xl font-bold text-teal-900'>Congratulation!</h2>
                     <h2 className='font-bold text-2xl'>Here is your interview feedback</h2>
                     <h2 className='text-primary text-lg my-3'>Your overall interview rating: <strong></strong> </h2>
                     <h2 className='text-sm text-gray-500' > Find below interview questions with coreect answers, your answer snd feedback for improving</h2>

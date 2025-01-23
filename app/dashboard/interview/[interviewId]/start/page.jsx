@@ -77,7 +77,10 @@ function StartInterview({ params }) {
                         <Lightbulb />
                         <strong>Note:</strong>
                     </h2>
-                    <h2 className="text-sm text-blue-800 my-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil assumenda, deleniti nisi magni quidem ipsam. Dolore, quia neque iste quod soluta nisi officiis corporis enim eaque quae doloribus repellendus maiores cumque doloremque, odit aspernatur.</h2>
+                    <h2 className="text-sm text-blue-800 my-2">
+  Remember, clear communication is key to a successful interview. Take your time to understand the question, structure your response, and highlight your relevant skills and experiences. Don’t hesitate to showcase your unique strengths!
+</h2>
+
                 </div>
             </div>
             <div className=" flex gap-6">

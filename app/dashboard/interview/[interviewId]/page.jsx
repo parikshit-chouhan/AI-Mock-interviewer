@@ -69,7 +69,10 @@ function Interview({ params }) {
           }
           <div className="p-5 border rounded-lg border-yellow-300 bg-yellow-100" >
             <h2 className="flex gap-2 items-center text-yellow-600"><Lightbulb /> <span><strong>Information</strong></span></h2>
-            <h2 className="mt-3 text-yellow-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ut iusto esse temporibus architecto debitis eligendi, repellendus qui quo alias dolor! Quidem maxime velit molestiae voluptatem dicta reiciendis eligendi, rerum labore autem maiores? Eum assumenda totam itaque ex ratione dolorem?</h2>
+            <h2 className="mt-3 text-yellow-600">
+  Ensure you're in a quiet and well-lit environment before starting the mock interview. The AI will guide you through questions based on your job role and experience. Take your time to think, respond clearly, and use this opportunity to refine your interview skills!
+</h2>
+
           </div>
         </div>
 
